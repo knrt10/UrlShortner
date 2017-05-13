@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html ng-app="short">
+ <head> 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" type="text/css" />
+ 
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+ <script type="text/javascript" src="app1.js "></script>
+ </head> 
+ 
+ <style type="text/css">
+  body{
+   background-image:url("https://cdn3.tnwcdn.com/wp-content/blogs.dir/1/files/2013/10/URL-730x279.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
+  min-height:780px;
+   
+  }
+  h4,h3{
+   color:#A04000   ;
+  }
+ </style>
+     <body class="text-center">
+         <header>
+             <h2>URL Shortner</h2>
+             <h3>Free Code Camp Project</h3>
+             <i>This app is used to shorten your input url to use this app follow the instructions below</i><br/>
+             <img src ="http://4.bp.blogspot.com/-c-QSq_2YMcs/VXbT_PLZlWI/AAAAAAAAEFg/m1t5VBl9sEs/s1600/url%2Bshortner.jpg"
+             width="250"><br/><br/>
+             <h4>Languages Used : Node , Express , MongoDB , JS </h4>
+         </header>
+         <br/>
+         <h3>Example creation usage:</h3>
+         <code>https://url-shortner-api-knrt.c9users.io//new/https://www.google.com</code>
+         <code>https://url-shortner-api-knrt.c9users.io//new/http://foo.com:80</code><br/><br/>
+         <h3>Example creation output</h3>
+         <code>{"originalURL":"www.google.com","shorterUrl":"30","_id":"5916988333d4be09b056c1a8"}</code>
+         <h3>Usage:</h3>
+         <code>https://url-shortner-api-knrt.c9users.io/30</code>
+         <h3>Will redirect to:</h3>
+         <code>https://www.google.com/</code><br/><br/>
+         <section ng-controller="controller">
+          
+          <input  name="text" placeholder="Enter URL" id="input" ng-model="urlshortened"/>
+          <a class=" btn-primary btn-lg"  id="btn" ng-href="/new/{{urlshortened}}" >Get Short Url !!</a>
+         </section>
+     </body>
+  
+</html>
